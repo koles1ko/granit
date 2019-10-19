@@ -1,0 +1,17 @@
+@mixin main-text{
+  font-family: 'Gotham Pro';
+  font-weight: 400;
+  font-size: 14px;
+  color: $main-color;
+}
+@mixin f500{
+  font-family: 'Gotham Pro-Medium';
+  font-weight: 500;
+}
+@mixin f300{
+  font-family: 'Gotham Pro-Light';
+  font-weight: 500;
+}
+$main-color: #292929;
+$yellow: #ffcc00;
+$grey: #626262;

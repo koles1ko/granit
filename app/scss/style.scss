@@ -1,3 +1,392 @@
 @import 'vars';
 @import 'global';
 @import 'fonts';
+
+//start header
+.header{
+  position: relative;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 130px;
+  }
+  &__call{
+    margin-left: auto;
+    text-align: right;
+    a{
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $main-color;
+    }
+  }
+  &__call-free{
+    font-size: 11px;
+    font-weight: 400;
+    color: #969696;
+    margin-top: 5px;
+  }
+  .take-call{
+    margin-left: 30px;
+    transition: all .3s;
+    &:hover{
+      transform: scale(1.1)
+    }
+  }  
+  &__menu{
+    background-color: $yellow;
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 940px;
+    width: 100%;
+  }
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 60px;
+  }
+  li{
+    display: inline-block;
+    a{
+      color: #000;
+      font-size: 14px;
+      @include f500;
+      transition: all .3s;
+      &:hover{
+        transform: scale(1.1)
+      }
+    }
+  }
+  
+}
+
+//end header
+//start intro
+.intro{
+  background-color: brown;
+  min-height: 550px;
+  padding-top: 170px;
+  color: #fff;
+  &__desc{
+    margin-top: 40px;
+    max-width: 245px;
+    width: 100%;
+    font-size: 14px;
+    @include f300;
+    margin-bottom: 65px;
+  }
+  &__links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 380px;
+    width: 100%;
+    span{
+      margin-left: auto;
+      font-size: 12px;
+    }
+    .view-catalog{
+      margin-left: 12px;
+      font-size: 12px;
+      @include f500;
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}
+//end intro
+//start products
+.product{
+  min-height: 706px;
+  padding: 80px 0;
+  &__item{
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    min-height: 470px;
+    padding: 37px 23px;
+    border: 2px solid #f6f6f6;
+    img{
+      display: block;
+      margin-bottom: 45px;
+    }
+    &-desc{
+      color: $grey;
+      font-size: 13px;
+      @include f300;
+      margin-bottom: 29px;
+
+    }
+    .dft-btn{
+      padding-left: 55px;
+      padding-right: 55px;
+      transition: all .4s;
+      &:hover{
+        transform: scale(1.1)
+      }
+    }
+  }
+}
+//end products
+//start advantage
+.advantage{
+  background-color: #f4f4f4;
+  padding: 80px 0;
+  &__item{
+    max-width: 300px;
+    width: 100%;
+    min-height: 253px;
+    text-align: center;
+    padding: 40px;
+    border: 2px solid #fff;
+    transition: all .3s;
+    &:hover{
+      background-color: #fff;
+      box-shadow: 0 9px 21px rgba(0, 0, 0, 0.05);
+    }  
+    img{
+      display: block;
+      margin: 0 auto 40px;
+    }
+    .item-title{
+      text-decoration: none;
+    }
+    &-desc{
+      font-size: 12px;
+      line-height: 18px;
+      @include f300;
+    }
+  }
+}
+
+//end advantage
+//start popular
+.popular{
+  padding: 80px 0;
+  &-item{
+    max-width: 220px;
+    width: 100%;
+    min-height: 345px;
+    border: 2px solid #f4f4f4;
+    text-align: center;
+    padding: 15px;
+    &__img{
+      margin-bottom: 22px;
+      position: relative;
+    }
+    &__desc{
+      font-size: 13px;
+      text-decoration: underline;
+      margin-bottom: 24px;
+    }
+    &__cost{
+      color: #000;
+      font-size: 16px;
+      @include f500;
+    }
+    &.event{
+      .event-box{
+        display: block;
+      }
+    }
+    .event-box{
+      display: none;
+      position: absolute;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #ff0000;
+      padding: 8px 10px 6px 7px;
+      left: 10px;
+      top: 10px;
+      font-size: 10px;
+      @include f500;
+
+    }
+    .old-cost,
+    .new-cost{
+      display: inline-block;
+    }
+    .old-cost{
+      font-size: 10px;
+      color: #979797;
+      text-decoration: line-through;
+    }
+    .new-cost{
+      margin-left: 14px;
+      color: #ff0000;
+      font-size: 16px;
+      @include f500;
+    }
+    .dft-btn{
+      margin-top: 25px;
+      padding-left: 70px;
+      padding-right: 67px;
+      transition: all .4s;
+      &:hover{
+        transform: scale(1.1)
+      }
+    }
+  }
+}
+//end popular
+//start service
+.service{
+  background-color: #f4f4f4;
+  padding: 80px 0;
+  &-item{
+    max-width: 300px;
+    width: 100%;
+    min-height: 253px;
+    display: block;
+    text-align: center;
+    border: 2px solid #fff;
+    padding: 50px 25px 40px;
+    transition: all .3s;
+    &:hover{
+      background-color: #fff;
+      box-shadow: 0 9px 21px rgba(0, 0, 0, 0.05);
+    }
+    &__img{
+      height: 134px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 26px;
+    }
+    div{
+      margin-top: auto;
+      font-size: 15px;
+      color: $main-color;
+      text-decoration: underline;
+      @include f500;
+    }
+  }
+}
+//end service
+//start contact
+.contact{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__inner{
+    padding: 80px 0;
+  }
+  a{
+    display: block;
+    color: $main-color;
+    padding-left: 30px;
+  }
+  &__table{
+    padding: 60px 80px 70px 60px;
+    background-color: #fff;
+    max-width: 380px;
+    width: 100%;
+    min-height: 360px;
+    margin-left: auto;
+    .section-title{
+      margin-bottom: 53px;
+      text-align: left;
+    }
+  }
+  &__phone{
+    font-size: 14px;
+    text-transform: uppercase;
+    @include f500;
+    margin-bottom: 40px;
+    & + &{
+      margin-top: 20px;
+    }
+    &-wrapper{
+      position: relative;
+      &::before{
+        position: absolute;
+        content: '';
+        width: 12px;
+        height: 12px;
+        background-image: url(../images/icons/phone.png);
+        left: 0;
+        top: 1px;
+      }
+    }
+  }
+  .location{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    position: relative;
+    &:before{
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 15px;
+      background-image: url(../images/icons/map.png);
+      left: 0;
+      top: 1px;
+    }
+  }
+  &__mail{
+    font-size: 14px;
+    text-decoration: underline;
+    position: relative;
+    &:before{
+      position: absolute;
+      content: '';
+      width: 14px;
+      height: 10px;
+      background-image: url(../images/icons/mail.png);
+      left: 0;
+      top: 1px;
+    }
+  }
+}
+//end contact
+//start footer
+.footer{
+  background-color: $main-color;
+  padding: 50px 0 45px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &_left{
+    &__logo{
+      margin-bottom: 54px;
+    }
+    .copy{
+      color: #fff;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+  &_right{
+    text-align: right;
+    .header__phone{
+      color: #fff;
+    }
+    .header__call-free{
+      color: #fff;
+    }
+    .take-call{
+      color: #fff;
+      border-color: #fff;
+      margin-top: 30px;
+      transition: all .3s;
+      &:hover{
+        transform: scale(1.1)
+      }
+    }
+  }
+}
+//end footer
+
+
+
+
+
+
+
+@import 'media';

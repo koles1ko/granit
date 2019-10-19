@@ -21,11 +21,10 @@ li {
   list-style: none;
 }
 body {
-  font-family:;
-  font-weight:;
-  font-size:;
-  line-height:;
-  color:;
+  @include main-text;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
 }
 .wrapper{
   display: flex;
@@ -39,7 +38,51 @@ body {
   flex: 0 0 auto;
 }
 .container {
-  max-width:;
+  max-width: 970px;
   margin: 0 auto;
-  padding:;
+  padding: 0 15px;
+}
+.take-call{
+  padding: 11px 23px 12px 25px;
+  border: 2px solid $main-color;
+  color: $main-color;
+  font-size: 12px;
+  font-weight: 500;
+}
+.title{
+  @include f500;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.dft-btn{
+  background-color: $yellow;
+  color: #0d0d0d;
+  font-size: 12px;
+  @include f500;
+  padding: 19px 29px 17px;
+}
+.section-title{
+  color: $main-color;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom:60px;
+  text-align: center;
+}
+.section-items{
+  display: flex;
+  justify-content: space-between;
+}
+.item-title{
+  font-size: 15px;
+  text-decoration: underline;
+  @include f500;
+  margin-bottom: 19px;
+}
+.cost{
+  color: #0f0f0f;
+  font-size: 16px;
+  @include f500;
+  margin-bottom: 32px;
 }
