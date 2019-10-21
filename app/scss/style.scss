@@ -67,10 +67,19 @@
 //end header
 //start intro
 .intro{
-  background-color: brown;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   min-height: 550px;
-  padding-top: 170px;
   color: #fff;
+  &-wrapper{
+    width: 100%;
+    min-height: 550px;
+    background-color: rgba(#000, .7);
+  }
+  &__info{
+    padding-top: 170px;
+  }
   &__desc{
     margin-top: 40px;
     max-width: 245px;
@@ -129,6 +138,11 @@
         transform: scale(1.1)
       }
     }
+  }
+  &__img{
+    height: 179px;
+    display: flex;
+    align-items: flex-end;
   }
 }
 //end products
