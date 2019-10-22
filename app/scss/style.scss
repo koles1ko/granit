@@ -33,14 +33,18 @@
     &:hover{
       transform: scale(1.1)
     }
-  }  
-  &__menu{
-    background-color: $yellow;
+  } 
+  &__menu-wrapper{
     position: absolute;
+    max-width: 970px;
+    width: 100%;
+    padding: 0 15px;
     bottom: -45px;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 940px;
+  } 
+  &__menu{
+    background-color: $yellow;
     width: 100%;
   }
   ul{
@@ -63,7 +67,9 @@
   }
   
 }
-
+.logo-mobile{
+  display: none;
+}
 //end header
 //start intro
 .intro{
